@@ -1,3 +1,7 @@
+-- lua/plugins/nvim-tree.lua 
+-- lainon
+-- 22/11/2021
+
 vim.cmd [[
 
 highlight NvimTreeFolderIcon guibg=blue

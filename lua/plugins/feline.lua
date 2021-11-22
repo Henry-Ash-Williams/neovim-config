@@ -1,3 +1,8 @@
+-- lua/plugins/feline.lua 
+-- lainon
+-- 22/11/2021
+-- from: https://github.com/ibhagwan/nvim-lua/blob/main/lua/plugins/feline.lua
+
 if not pcall(require, "feline") then
   return
 end
