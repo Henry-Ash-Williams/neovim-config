@@ -48,16 +48,16 @@ nnoremap("<C-n>", [[ :NvimTreeToggle<CR> ]])
 nnoremap("<leader>r", [[ :NvimTreeRefresh<CR> ]])
 nnoremap("<leader>n", [[ :NvimTreeFindFile<CR> ]]) 
 nnoremap("<C-t>", [[ :NvimTreeFocus<CR> ]])
-nnoremap("<F9>", [[ za ]]) 
+-- nnoremap("<F9>", [[ za ]]) 
 
 tnoremap("<C-l>", [[ <C-w>l ]])
 tnoremap("<C-k>", [[ <C-w>k ]])
 tnoremap("<C-j>", [[ <C-w>j ]])
 tnoremap("<C-h>", [[ <C-w>h ]])
 
-inoremap("<F9>", [[ <C-O>za ]]) 
+-- inoremap("<F9>", [[ <C-O>za ]]) 
 inoremap("jk", [[ <ESC> ]])
 
-onoremap("<F9>", [[ <C-C>za ]])
-vnoremap("<F9>", [[ zfe ]]) 
+-- onoremap("<F9>", [[ <C-C>za ]])
+-- vnoremap("<F9>", [[ zfe ]]) 
 
