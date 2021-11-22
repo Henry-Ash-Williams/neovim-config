@@ -21,10 +21,19 @@ augroup end
 
 return require('packer').startup(function(use)
     use 'joshdick/onedark.vim'
-    use 'glepnir/dashboard-nvim'
     use 'SirVer/ultisnips'
 	use 'rust-lang/rust.vim'
 	use 'cespare/vim-toml'
+
+    use  { 
+        'glepnir/dashboard-nvim',
+        config = "require('plugins/dashboard')"
+    }
+
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = ':TSUpdate'
+    }
 
     use {
         'famiu/feline.nvim',
@@ -34,17 +43,20 @@ return require('packer').startup(function(use)
     use {
         'kyazdani42/nvim-tree.lua',
         requires = 'kyazdani42/nvim-web-devicons',
-        config = "require('plugins/nvim-tree')"
+        config = function ()
+            require('plugins.nvim-tree')
+        end, 
     }
 
     use {
         'akinsho/bufferline.nvim',
         requires = 'kyazdani42/nvim-web-devicons',
-        config = "require('plugins/dashboard')"
+        config = "require('plugins/bufferline')"
     }
+
     use {
-      'nvim-telescope/telescope.nvim',
-      requires = { {'nvim-lua/plenary.nvim'} }
+        'nvim-telescope/telescope.nvim',
+        requires = { {'nvim-lua/plenary.nvim'} }
     }
 
     -- packer.nvim stuff
