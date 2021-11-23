@@ -5,3 +5,5 @@
 require('plugins')
 require('options')
 require('mappings')
+require('color')
+require('utils')

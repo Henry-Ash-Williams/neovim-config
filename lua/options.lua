@@ -2,8 +2,6 @@
 -- lainon
 -- 22/11/2021 
 
-vim.cmd [[ colo onedark ]]
-
 vim.opt.termguicolors = true 
 
 vim.wo.signcolumn = 'yes'
@@ -14,7 +12,6 @@ vim.o.conceallevel = 0
 vim.o.cmdheight = 1
 vim.o.showtabline = 2
 vim.o.pumheight = 10
-vim.o.termguicolors = true
 vim.o.title = true
 vim.o.showmode = false
 vim.o.hlsearch = false
@@ -43,11 +40,8 @@ vim.o.inccommand = 'nosplit'
 vim.o.fileencoding = "utf-8"
 vim.o.spelllang = "en"
 
-
-
 vim.g.UltiSnipsExpandTrigger = '<tab>'
 vim.g.UltiSnipsJumpForwardTrigger = '<tab>'
 vim.g.UltiSnipsJumpBackwardTrigger = '<s-tab>'
 vim.g.python_host_prog = "/usr/bin/python2"
 vim.g.python3_host_prog = "/usr/bin/python3"
-

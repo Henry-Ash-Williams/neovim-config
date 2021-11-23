@@ -3,7 +3,7 @@
 -- 22/11/2021
 
 vim.cmd [[ 
-let g:dashboard_default_executive = 'telelscope.nvim' 
+let g:dashboard_default_executive = 'telelscope' 
 
 let g:dashboard_custom_header = [
     \ '', 

@@ -3,17 +3,18 @@
 -- 22/11/2021
 
 local utils = require("utils")
+local map = utils.keymap_utils 
 
-local exprnnoremap = utils.exprnnoremap
-local nnoremap = utils.nnoremap
-local vnoremap = utils.vnoremap
-local xnoremap = utils.xnoremap
-local inoremap = utils.inoremap
-local tnoremap = utils.tnoremap
-local onoremap = utils.onoremap 
-local nmap = utils.tnoremap
+local exprnnoremap = map.exprnnoremap
+local nnoremap = map.nnoremap
+local vnoremap = map.vnoremap
+local xnoremap = map.xnoremap
+local inoremap = map.inoremap
+local tnoremap = map.tnoremap
+local onoremap = map.onoremap 
+local nmap = map.tnoremap
 
-vim.cmd [[ let g:mapleader="\<space>" ]]
+vim.cmd [[ let g:mapleader="\<Space>" ]]
 
 nnoremap("<leader>y", [[ :nohl<CR> ]])
 nnoremap("<leader>t", [[ :set spell!<CR> ]])
@@ -24,7 +25,7 @@ nnoremap("<C-j>", [[ <C-w>j ]])
 nnoremap("<C-h>", [[ <C-w>h ]])
 
 nnoremap("<leader>1", [[ <Cmd>BufferLineGoToBuffer 1<CR> ]])
-nnoremap("<leader>2", [[ <Cmd>BufferLineGoToBuffer 2<CR> ]])
+nnoremap("<leader>2", [[ <CmdBufferLineGoToBuffer 2<CR> ]])
 nnoremap("<leader>3", [[ <Cmd>BufferLineGoToBuffer 3<CR> ]])
 nnoremap("<leader>4", [[ <Cmd>BufferLineGoToBuffer 4<CR> ]])
 nnoremap("<leader>5", [[ <Cmd>BufferLineGoToBuffer 5<CR> ]])
@@ -40,24 +41,15 @@ nnoremap("<leader>tc", [[ :Telescope colorscheme<CR> ]])
 nnoremap("<leader>fa", [[ :Telescope live_grep<CR> ]])
 nnoremap("<leader>fb", [[ :Telescope marks<CR> ]])
 nnoremap("<leader>cn", [[ :DashboardNewFile<CR> ]])
-
-nnoremap("<tab>", [[ :BufferLineMoveNext <CR> ]])
-nnoremap("<S-tab>", [[ :BufferLineMovePrev <CR> ]])
         
-nnoremap("<C-n>", [[ :NvimTreeToggle<CR> ]])
+nnoremap("<C-n>",     [[ :NvimTreeToggle<CR> ]])
 nnoremap("<leader>r", [[ :NvimTreeRefresh<CR> ]])
 nnoremap("<leader>n", [[ :NvimTreeFindFile<CR> ]]) 
-nnoremap("<C-t>", [[ :NvimTreeFocus<CR> ]])
--- nnoremap("<F9>", [[ za ]]) 
+nnoremap("<C-t>",     [[ :NvimTreeFocus<CR> ]])
 
 tnoremap("<C-l>", [[ <C-w>l ]])
 tnoremap("<C-k>", [[ <C-w>k ]])
 tnoremap("<C-j>", [[ <C-w>j ]])
 tnoremap("<C-h>", [[ <C-w>h ]])
 
--- inoremap("<F9>", [[ <C-O>za ]]) 
 inoremap("jk", [[ <ESC> ]])
-
--- onoremap("<F9>", [[ <C-C>za ]])
--- vnoremap("<F9>", [[ zfe ]]) 
-
