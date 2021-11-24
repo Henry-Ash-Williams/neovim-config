@@ -27,7 +27,9 @@ return require('packer').startup(function(use)
 
     use  { 
         'glepnir/dashboard-nvim',
-        config = "require('plugins/dashboard')"
+        config = function()
+            require('plugins/dashboard') 
+        end,
     }
 
     use {
@@ -37,7 +39,9 @@ return require('packer').startup(function(use)
 
     use {
         'famiu/feline.nvim',
-        config = "require('plugins/feline')"
+        config = function ()
+            require('plugins/feline')
+        end, 
     }
 
     use {
@@ -51,7 +55,9 @@ return require('packer').startup(function(use)
     use {
         'akinsho/bufferline.nvim',
         requires = 'kyazdani42/nvim-web-devicons',
-        config = "require('plugins/bufferline')"
+        config = function()
+            require('plugins/bufferline')
+        end,
     }
 
     use {

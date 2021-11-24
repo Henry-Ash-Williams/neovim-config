@@ -1,17 +1,36 @@
 -- lua/plugins/dashboard.lua
 -- lainon
 -- 22/11/2021
+--
+--
 
-vim.cmd [[ 
-let g:dashboard_default_executive = 'telelscope' 
 
-let g:dashboard_custom_header = [
-    \ '', 
-    \ '[レインを愛しましょう]',
-    \ ''] 
+vim.g.dashboard_custom_header = { 
+    "zZzZ...",
+    "　＜⌒／ヽ-､_＿_",
+    " ／＜_/＿＿＿＿／",
+    " ￣￣￣￣￣￣￣",
+    "",
+    "       ∧_∧",
+    " 　　 (･_･)    [lain.nvim]",
+    " 　 ＿|⊃／(＿＿_  ",
+    "  ／　└-(＿＿＿_／",
+    ""}
 
-let g:dashboard_custom_footer = ['']
+
+vim.cmd [[
+
+let g:dashboard_default_executive = "telescope"
+
+" let g:dashboard_custom_section={
+    " \ 'buffer_list': {
+        " \ 'description': ['   Open neovim config                         '],
+        " \ 'command': 'echo("Config opening...")'}
+" \ }
+
+
+
+let g:dashboard_custom_footer = [ 
+    \ "[レインを愛しましょう]", 
+    \ ]
 ]]
-
-
-

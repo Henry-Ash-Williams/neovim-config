@@ -2,7 +2,13 @@
 -- lainon
 -- 22/11/2021 
 
+local utils = require('utils')
+local au = utils.autocmd
+
 vim.opt.termguicolors = true 
+vim.opt.filetype = 'on' 
+
+vim.cmd [[ set shortmess-=F ]]
 
 vim.wo.signcolumn = 'yes'
 vim.wo.number = true
@@ -45,3 +51,10 @@ vim.g.UltiSnipsJumpForwardTrigger = '<tab>'
 vim.g.UltiSnipsJumpBackwardTrigger = '<s-tab>'
 vim.g.python_host_prog = "/usr/bin/python2"
 vim.g.python3_host_prog = "/usr/bin/python3"
+
+vim.cmd [[
+" augroup NvimTreeAutoOpen
+"     autocmd!
+"     autocmd BufReadPre * :NvimTreeOpen
+" augroup END
+]]
