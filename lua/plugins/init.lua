@@ -24,6 +24,7 @@ return require('packer').startup(function(use)
     use 'SirVer/ultisnips'
 	use 'rust-lang/rust.vim'
 	use 'cespare/vim-toml'
+    use 'junegunn/goyo.vim'
 
     use  { 
         'glepnir/dashboard-nvim',

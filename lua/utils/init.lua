@@ -1,3 +1,7 @@
+-- lua/plugins/init.lua
+-- lainon
+-- 25/11/2021
+
 local M = {}
 
 M.au = require('utils.autocmd')

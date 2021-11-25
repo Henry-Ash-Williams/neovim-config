@@ -1,3 +1,7 @@
+-- lua/plugins/bufferline.lua
+-- lainon
+-- 25/11/2021 
+
 return require'bufferline'.setup {
    options = {
       offsets = { 

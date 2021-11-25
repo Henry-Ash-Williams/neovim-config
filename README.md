@@ -12,6 +12,7 @@ This repository contains my configuration of [neovim](https://github.com/neovim/
  * [nvim-tree.lua](https://github.com/kyazdani42/nvim-tree.lua)
  * [bufferline.nvim](https://github.com/akinsho/bufferline.nvim)
  * [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
+ * [goyo.vim](https://github.com/junegunn/goyo.vim)
 
 ## Keymaps
 

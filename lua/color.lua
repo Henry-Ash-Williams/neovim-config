@@ -23,7 +23,7 @@ s.colors = {
 }
 
 s.format_highlight = function(fg, bg)
-    return 'guifg='..fg..' guibg='..bg..' ctermfg=0 ctermfg=0'
+    return 'guifg='..fg..' guibg='..bg..' ctermfg=0 ctermfg=0';
 end
 
 vim.cmd(string.format([[
