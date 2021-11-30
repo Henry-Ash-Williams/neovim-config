@@ -26,7 +26,7 @@ return require('packer').startup(function(use)
 	use 'cespare/vim-toml'
     use 'junegunn/goyo.vim'
 
-    use  { 
+    use { 
         'glepnir/dashboard-nvim',
         config = function()
             require('plugins/dashboard') 

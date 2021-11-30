@@ -43,18 +43,12 @@ vim.o.undofile = true
 vim.o.updatetime = 250
 vim.o.timeoutlen = 250
 vim.o.inccommand = 'nosplit'
-vim.o.fileencoding = "utf-8"
-vim.o.spelllang = "en"
+vim.o.fileencoding = 'utf-8'
+vim.o.spelllang = 'en'
 
 vim.g.UltiSnipsExpandTrigger = '<tab>'
+vim.g.UltiSnipsSnippetDirectories = { 'snips' }
 vim.g.UltiSnipsJumpForwardTrigger = '<tab>'
 vim.g.UltiSnipsJumpBackwardTrigger = '<s-tab>'
-vim.g.python_host_prog = "/usr/bin/python2"
-vim.g.python3_host_prog = "/usr/bin/python3"
-
-vim.cmd [[
-" augroup NvimTreeAutoOpen
-"     autocmd!
-"     autocmd BufReadPre * :NvimTreeOpen
-" augroup END
-]]
+vim.g.python_host_prog = '/usr/bin/python2'
+vim.g.python3_host_prog = '/usr/bin/python3'

@@ -24,17 +24,6 @@ nnoremap("<C-k>", [[ <C-w>k ]])
 nnoremap("<C-j>", [[ <C-w>j ]])
 nnoremap("<C-h>", [[ <C-w>h ]])
 
-nnoremap("<leader>1", [[ <Cmd>BufferLineGoToBuffer 1<CR> ]])
-nnoremap("<leader>2", [[ <CmdBufferLineGoToBuffer 2<CR> ]])
-nnoremap("<leader>3", [[ <Cmd>BufferLineGoToBuffer 3<CR> ]])
-nnoremap("<leader>4", [[ <Cmd>BufferLineGoToBuffer 4<CR> ]])
-nnoremap("<leader>5", [[ <Cmd>BufferLineGoToBuffer 5<CR> ]])
-nnoremap("<leader>6", [[ <Cmd>BufferLineGoToBuffer 6<CR> ]])
-nnoremap("<leader>7", [[ <Cmd>BufferLineGoToBuffer 7<CR> ]])
-nnoremap("<leader>8", [[ <Cmd>BufferLineGoToBuffer 8<CR> ]])
-nnoremap("<leader>9", [[ <Cmd>BufferLineGoToBuffer 9<CR> ]])
-
-
 nnoremap("<leader>fh", [[ :Telescope oldfiles<CR> ]])
 nnoremap("<leader>ff", [[ :Telescope find_files<CR> ]])
 nnoremap("<leader>tc", [[ :Telescope colorscheme<CR> ]])
@@ -51,5 +40,6 @@ tnoremap("<C-l>", [[ <C-w>l ]])
 tnoremap("<C-k>", [[ <C-w>k ]])
 tnoremap("<C-j>", [[ <C-w>j ]])
 tnoremap("<C-h>", [[ <C-w>h ]])
-
+ 
 inoremap("jk", [[ <ESC> ]])
+inoremap("kj", [[ <ESC> ]])

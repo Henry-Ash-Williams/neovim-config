@@ -8,10 +8,11 @@ local au = utils.au
 local g = vim.g
 
 g.onedark_hide_endofbuffer = true
-g.onedark_terminal_italics = true 
 
 local s = {}
+
 s.colors = {
+    darker_black = "#1B1E23",
     black = "#282C34",
     red = "#ED6C75",
     green = "#98C379",
@@ -22,23 +23,15 @@ s.colors = {
     white = "#ABB2BF"
 }
 
-s.format_highlight = function(fg, bg)
-    return 'guifg='..fg..' guibg='..bg..' ctermfg=0 ctermfg=0';
+s.format_highlight = function(fg)
+    return 'guifg='..fg..' guibg='..s.colors.black..' ctermfg=NONE ctermfg=NONE'
 end
 
-vim.cmd(string.format([[
-augroup UserColorConfig 
-    autocmd!
-    autocmd ColorScheme hi DashboardHeader   %s
-    autocmd ColorScheme hi DashboardFooter   %s
-    autocmd ColorScheme hi DashboardCenter   %s
-    autocmd ColorScheme hi DashboardShortcut %s
-augroup END
+au.group("UserColorConfig", {
+    { "ColorScheme", "*", string.format("hi DashBoardHeader %s", s.format_highlight(s.colors.purple)) },
+    { "ColorScheme", "*", string.format("hi DashBoardFooter %s", s.format_highlight(s.colors.red)) },
+    { "ColorScheme", "*", string.format("hi DashBoardCenter %s", s.format_highlight(s.colors.blue)) },
+    { "ColorScheme", "*", string.format("hi DashBoardShortcut %s", s.format_highlight(s.colors.green)) },
+})
 
-colo onedark
-]], 
-    s.format_highlight(s.colors.blue, s.colors.black),
-    s.format_highlight(s.colors.blue, s.colors.black),
-    s.format_highlight(s.colors.green, s.colors.black),
-    s.format_highlight(s.colors.purple, s.colors.black)
-))
+vim.cmd [[ colo onedark ]]
