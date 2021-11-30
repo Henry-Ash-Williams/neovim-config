@@ -20,6 +20,7 @@ augroup end
 
 
 return require('packer').startup(function(use)
+    use 'honza/vim-snippets'
     use 'joshdick/onedark.vim'
     use 'SirVer/ultisnips'
 	use 'rust-lang/rust.vim'

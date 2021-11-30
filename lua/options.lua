@@ -2,9 +2,6 @@
 -- lainon
 -- 22/11/2021 
 
-local utils = require('utils')
-local au = utils.autocmd
-
 vim.opt.termguicolors = true 
 vim.opt.filetype = 'on' 
 
@@ -13,7 +10,6 @@ vim.cmd [[ set shortmess-=F ]]
 vim.wo.signcolumn = 'yes'
 vim.wo.number = true
 vim.wo.colorcolumn = '80'
-
 vim.o.conceallevel = 0
 vim.o.cmdheight = 1
 vim.o.showtabline = 2
@@ -47,8 +43,9 @@ vim.o.fileencoding = 'utf-8'
 vim.o.spelllang = 'en'
 
 vim.g.UltiSnipsExpandTrigger = '<tab>'
-vim.g.UltiSnipsSnippetDirectories = { 'snips' }
+vim.g.UltiSnipsSnippetDirectories = { '/dev/null' }
 vim.g.UltiSnipsJumpForwardTrigger = '<tab>'
 vim.g.UltiSnipsJumpBackwardTrigger = '<s-tab>'
 vim.g.python_host_prog = '/usr/bin/python2'
 vim.g.python3_host_prog = '/usr/bin/python3'
+
