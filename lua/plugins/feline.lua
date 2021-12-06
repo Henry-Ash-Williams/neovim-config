@@ -3,11 +3,12 @@
 -- 22/11/2021
 -- from: https://github.com/ibhagwan/nvim-lua/blob/main/lua/plugins/feline.lua
 
-if not pcall(require, "feline") then
+if not pcall(require, 'feline') then
   return
 end
 
 local colors = {
+    bg_darker = '#1B1E23',
     bg = '#282c34',
     fg = '#abb2bf',
     yellow = '#e0af68',
@@ -72,7 +73,7 @@ local comps = {
                 local val = {
                     name = vi_mode_utils.get_mode_highlight_name(),
                     fg = vi_mode_utils.get_mode_color(),
-                    -- fg = colors.bg
+                    bg = '#1B1E23'
                 }
                 return val
             end,
@@ -99,15 +100,7 @@ local comps = {
               opts = {
                 type = 'relative-short',
                 file_readonly_icon = '  ',
-                -- file_readonly_icon = '  ',
-                -- file_readonly_icon = '  ',
-                -- file_readonly_icon = '  ',
-                -- file_modified_icon = '',
                 file_modified_icon = '',
-                -- file_modified_icon = 'ﱐ',
-                -- file_modified_icon = '',
-                -- file_modified_icon = '',
-                -- file_modified_icon = '',
               }
             },
             hl = {
@@ -169,7 +162,7 @@ local comps = {
         err = {
             -- provider = 'diagnostic_errors',
             provider = function()
-                return '' .. lsp_get_diag("Error")
+                return '' .. lsp_get_diag('Error')
             end,
             -- left_sep = ' ',
             enabled = function() return lsp.diagnostics_exist('Error') end,
@@ -180,7 +173,7 @@ local comps = {
         warn = {
             -- provider = 'diagnostic_warnings',
             provider = function()
-                return '' ..  lsp_get_diag("Warning")
+                return '' ..  lsp_get_diag('Warning')
             end,
             -- left_sep = ' ',
             enabled = function() return lsp.diagnostics_exist('Warning') end,
@@ -191,7 +184,7 @@ local comps = {
         info = {
             -- provider = 'diagnostic_info',
             provider = function()
-                return '' .. lsp_get_diag("Information")
+                return '' .. lsp_get_diag('Information')
             end,
             -- left_sep = ' ',
             enabled = function() return lsp.diagnostics_exist('Information') end,
@@ -202,7 +195,7 @@ local comps = {
         hint = {
             -- provider = 'diagnostic_hints',
             provider = function()
-                return '' .. lsp_get_diag("Hint")
+                return '' .. lsp_get_diag('Hint')
             end,
             -- left_sep = ' ',
             enabled = function() return lsp.diagnostics_exist('Hint') end,
@@ -288,24 +281,24 @@ table.insert(components.active[3], comps.vi_mode.right)
 
 
 -- TreeSitter
--- local ts_utils = require("nvim-treesitter.ts_utils")
--- local ts_parsers = require("nvim-treesitter.parsers")
--- local ts_queries = require("nvim-treesitter.query")
+-- local ts_utils = require('nvim-treesitter.ts_utils')
+-- local ts_parsers = require('nvim-treesitter.parsers')
+-- local ts_queries = require('nvim-treesitter.query')
 --[[ table.insert(components.active[2], {
   provider = function()
-    local node = require("nvim-treesitter.ts_utils").get_node_at_cursor()
-    return ("%d:%s [%d, %d] - [%d, %d]")
+    local node = require('nvim-treesitter.ts_utils').get_node_at_cursor()
+    return ('%d:%s [%d, %d] - [%d, %d]')
       :format(node:symbol(), node:type(), node:range())
   end,
   enabled = function()
-    local ok, ts_parsers = pcall(require, "nvim-treesitter.parsers")
+    local ok, ts_parsers = pcall(require, 'nvim-treesitter.parsers')
     return ok and ts_parsers.has_parser()
   end
 }) ]]
 
 -- require'feline'.setup {}
 require'feline'.setup {
-    colors = { bg = colors.bg, fg = colors.fg },
+    colors = { bg = colors.bg_darker, fg = colors.fg },
     components = components,
     vi_mode_colors = vi_mode_colors,
     force_inactive = {

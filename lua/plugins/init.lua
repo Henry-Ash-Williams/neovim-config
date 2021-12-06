@@ -20,6 +20,7 @@ augroup end
 
 
 return require('packer').startup(function(use)
+    use 'stevearc/aerial.nvim'
     use 'honza/vim-snippets'
     use 'joshdick/onedark.vim'
     use 'SirVer/ultisnips'
@@ -64,6 +65,9 @@ return require('packer').startup(function(use)
 
     use {
         'nvim-telescope/telescope.nvim',
+        config = function()
+            require('plugins/telescope-nvim')
+        end, 
         requires = { {'nvim-lua/plenary.nvim'} }
     }
 

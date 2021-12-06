@@ -2,8 +2,13 @@
 -- lainon
 -- 22/11/2021 
 
+local utils = require('utils')
+local au = utils.au
+
 vim.opt.termguicolors = true 
 vim.opt.filetype = 'on' 
+vim.opt.splitbelow = true
+vim.opt.splitright = true 
 
 vim.cmd [[ set shortmess-=F ]]
 
@@ -43,9 +48,10 @@ vim.o.fileencoding = 'utf-8'
 vim.o.spelllang = 'en'
 
 vim.g.UltiSnipsExpandTrigger = '<tab>'
-vim.g.UltiSnipsSnippetDirectories = { '/dev/null' }
+vim.g.UltiSnipsSnippetDirectories = { '~/.local/share/nvim/site/pack/packer/start/vim-snippets/UltiSnips' }
 vim.g.UltiSnipsJumpForwardTrigger = '<tab>'
 vim.g.UltiSnipsJumpBackwardTrigger = '<s-tab>'
 vim.g.python_host_prog = '/usr/bin/python2'
 vim.g.python3_host_prog = '/usr/bin/python3'
-
+vim.g.goyo_height = 100
+vim.g.cmdheight = 1 
